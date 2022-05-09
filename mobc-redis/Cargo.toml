@@ -2,7 +2,7 @@
 name = "mobc-redis"
 version = "0.7.0"
 authors = ["importcjj <importcjj@gmail.com>"]
-edition = "2018"
+edition = "2021"
 license = "MIT/Apache-2.0"
 description = "Redis support for the mobc connection pool"
 repository = "https://github.com/importcjj/mobc"
@@ -12,7 +12,7 @@ keywords = ["redis", "pool", "async", "await"]
 
 [dependencies]
 mobc = { version = "0.7", path = ".." }
-redis = { version = "0.19" }
+redis = { version = "0.21" }
 
 [features]
 default = ["mobc/tokio", "redis/tokio-comp"]

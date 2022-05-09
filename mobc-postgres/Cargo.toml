@@ -2,7 +2,7 @@
 name = "mobc-postgres"
 version = "0.7.0"
 authors = ["importcjj <importcjj@gmail.com>"]
-edition = "2018"
+edition = "2021"
 readme = "README.md"
 license = "MIT/Apache-2.0"
 description = "Postgres support for the mobc connection pool"
