@@ -519,7 +519,10 @@ impl<M: Manager> Pool<M> {
         &self,
         mut internals: MutexGuard<'_, PoolInternals<M::Connection, M::Error>>,
     ) -> Result<Conn<M::Connection, M::Error>, Error<M::Error>> {
-        log::debug!("creating new connection from manager");
+        log::debug!(
+            "creating new connection from manager. internals.num_open:{}",
+            internals.num_open
+        );
         match self.0.manager.connect().await {
             Ok(c) => {
                 internals.num_open += 1;
